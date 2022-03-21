@@ -14,11 +14,11 @@ class HomeController < ApplicationController
     @@header = {
       "Content-Type": "application/json"
     }
-    HTTParty.post(
-      @@url,{
-      headers: @@header,
-      body: {"query" => @@query}.to_json}
-    )
+    # HTTParty.post(
+    #   @@url,{
+    #   headers: @@header,
+    #   body: {"query" => @@query}.to_json}
+    # )
   end
   def index
     @users = graph_get

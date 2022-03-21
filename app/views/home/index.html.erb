@@ -1,4 +1,12 @@
 <div class="text-center">
   <h1>Home</h1>
-  <%= @users %>
+  <div class="form-group">
+    <%= form_with do |f| %>
+      <%#= f.label :title, "Title", class: "text-left" %>
+      <%= f.text_field :title, class: "form-control text-left", placeholder: "Title of post" %>
+      <%#= f.label :post, "Post", class: "text-left"%>
+      <%= f.text_area :post, class: "form-control text-left", placeholder: "Place your post" %>
+      <%= f.submit :Submit, class: 'btn btn-dark' %>
+    <% end %>
+  </div>
 </div>
